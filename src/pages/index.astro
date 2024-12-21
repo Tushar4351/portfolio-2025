@@ -1,18 +1,18 @@
 ---
 import Navbar from "../components/NavBar";
 import Layout from "../layouts/Layout.astro";
+import Slider from "../components/Slider/Slider";
 ---
 
 <Layout title="Tushar">
-  <div class="h-screen p-2">
-    <div>
-      <div>
-        <Navbar client:load />
+  <Navbar client:load />
+
+  <main class="mt-24">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div class="h-[650px]">
+        <Slider client:load />
       </div>
-      <div>
-        <div></div>
-        <div></div>
-      </div>
+      <div></div>
     </div>
-  </div>
+  </main>
 </Layout>
