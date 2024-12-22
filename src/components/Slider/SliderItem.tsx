@@ -4,25 +4,46 @@ import { motion, AnimatePresence } from 'framer-motion';
 interface SliderItemProps {
   image: string;
   isActive: boolean;
-  index: number;
+  direction: number;
 }
 
-const SliderItem: React.FC<SliderItemProps> = ({ image, isActive, index }) => {
+const variants = {
+  enter: (direction: number) => ({
+    x: direction > 0 ? 1000 : -1000,
+    opacity: 0
+  }),
+  center: {
+    zIndex: 1,
+    x: 0,
+    opacity: 1
+  },
+  exit: (direction: number) => ({
+    zIndex: 0,
+    x: direction < 0 ? 1000 : -1000,
+    opacity: 0
+  })
+};
+
+const SliderItem: React.FC<SliderItemProps> = ({ image, isActive, direction }) => {
   return (
-    <AnimatePresence>
+    <AnimatePresence initial={false} custom={direction}>
       {isActive && (
         <motion.div
-          key={index}
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.5 }}
           className="absolute inset-0 w-full h-full"
+          custom={direction}
+          variants={variants}
+          initial="enter"
+          animate="center"
+          exit="exit"
+          transition={{
+            x: { type: "spring", stiffness: 300, damping: 30 },
+            opacity: { duration: 0.2 }
+          }}
         >
           <img
             src={image}
-            className="block absolute top-1/2 left-1/2 w-full h-full object-cover -translate-x-1/2 -translate-y-1/2"
-            alt={`Slide ${index + 1}`}
+            alt="Slide"
+            className="w-full h-full object-cover"
           />
         </motion.div>
       )}

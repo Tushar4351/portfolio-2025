@@ -16,10 +16,33 @@ const { title } = Astro.props;
     <link rel="icon" type="image/svg+xml" href="/Tushar_favicon.png" />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
+    <style>
+      html,
+      body {
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+      }
+      .wrapper {
+        height: 100%;
+        padding: 0.50rem;
+        display: flex;
+        flex-direction: column;
+      }
+      .content {
+        flex: 1;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+    </style>
   </head>
-  <body class="p-4">
-    <slot />
+  <body>
+    <div class="wrapper">
+      <div class="content">
+        <slot />
+      </div>
+    </div>
   </body>
 </html>
-
-

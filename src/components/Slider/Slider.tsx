@@ -1,60 +1,67 @@
 import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
 import SliderControls from './SliderControls';
 import SliderIndicators from './SliderIndicators';
 import SliderItem from './SliderItem';
 
 const images = [
-  "https://flowbite.com/docs/images/carousel/carousel-1.svg",
-  "https://flowbite.com/docs/images/carousel/carousel-2.svg",
-  "https://flowbite.com/docs/images/carousel/carousel-3.svg"
+  'https://images.unsplash.com/photo-1517841905240-472988babdf9',
+  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6',
+  'https://images.unsplash.com/photo-1534528741775-53994a69daeb'
 ];
 
 const Slider = () => {
-  const [currentSlide, setCurrentSlide] = useState(0);
+  const [[currentIndex, direction], setSlide] = useState([0, 0]);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+
+  const slideCount = images.length;
 
   useEffect(() => {
+    if (!isAutoPlaying) return;
+
     const timer = setInterval(() => {
-      setCurrentSlide((prev) => (prev + 1) % images.length);
+      nextSlide();
     }, 5000);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [currentIndex, isAutoPlaying]);
 
-  const handlePrevious = () => {
-    setCurrentSlide((prev) => (prev - 1 + images.length) % images.length);
+  const nextSlide = () => {
+    setSlide(prev => [(prev[0] + 1) % slideCount, 1]);
   };
 
-  const handleNext = () => {
-    setCurrentSlide((prev) => (prev + 1) % images.length);
+  const previousSlide = () => {
+    setSlide(prev => [(prev[0] - 1 + slideCount) % slideCount, -1]);
+  };
+
+  const goToSlide = (index: number) => {
+    const direction = index > currentIndex ? 1 : -1;
+    setSlide([index, direction]);
   };
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="relative w-full h-full rounded-lg overflow-hidden"
+    <div 
+      className="relative w-full h-full overflow-hidden"
+      onMouseEnter={() => setIsAutoPlaying(false)}
+      onMouseLeave={() => setIsAutoPlaying(true)}
     >
       {images.map((image, index) => (
         <SliderItem
           key={index}
           image={image}
-          isActive={currentSlide === index}
-          index={index}
+          isActive={index === currentIndex}
+          direction={direction}
         />
       ))}
-      
       <SliderControls
-        onPrevious={handlePrevious}
-        onNext={handleNext}
+        onPrevious={previousSlide}
+        onNext={nextSlide}
       />
-      
       <SliderIndicators
-        total={images.length}
-        current={currentSlide}
-        onSelect={setCurrentSlide}
+        total={slideCount}
+        current={currentIndex}
+        onSelect={goToSlide}
       />
-    </motion.div>
+    </div>
   );
 };
 
