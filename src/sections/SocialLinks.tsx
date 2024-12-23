@@ -4,7 +4,11 @@ import { BiEnvelope } from "react-icons/bi";
 import { SlidingLogo } from "../components/SlidingTextLogoEffect";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
-const SocialLinks = () => {
+import { FaInstagram, FaGithub } from "react-icons/fa";
+import { RiFacebookCircleLine } from "react-icons/ri";
+import { TbBrandLinkedin } from "react-icons/tb";
+
+export const SocialLinksTop = () => {
   return (
     <div className="flex flex-col gap-2">
       <div className="hidden md:flex flex-col gap-2">
@@ -44,4 +48,35 @@ const SocialLinks = () => {
   );
 };
 
-export default SocialLinks;
+export const SocialLinksBottom = () => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col gap-3"
+    >
+      <div className="grid md:grid-cols-2 gap-2">
+        {socialLinks.map((link) => (
+          <a key={link.id} href={link.url}>
+            <SlidingLogo
+              FirstIcon={link.icon}
+              SecondIcon={GoArrowUpRight}
+              name={link.title}
+              className="bg-secondary hover:bg-gray-200/70"
+            />
+          </a>
+        ))}
+      </div>
+      <a href="/contact">
+        <SlidingLogo
+          FirstIcon={BiEnvelope}
+          SecondIcon={GoArrowUpRight}
+          name="Contact Me"
+          className="bg-black text-white"
+        />
+      </a>
+    </motion.div>
+  );
+};

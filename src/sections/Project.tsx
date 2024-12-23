@@ -1,8 +1,15 @@
 import { cardData } from "../data/data";
 import ProjectCard from "../components/ProjectCard";
+import { motion } from "framer-motion";
 const Project = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      className="flex flex-col gap-3"
+    >
       {cardData.slice(0, 3).map((card, i) => (
         <a
           className="sticky"
@@ -21,7 +28,8 @@ const Project = () => {
           />
         </a>
       ))}
-    </div>
+   
+    </motion.div>
   );
 };
 

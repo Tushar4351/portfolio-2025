@@ -246,3 +246,66 @@ export const cardData: CardProps[] = [
     link: "https://docxtract.example.com",
   },
 ];
+export interface Skill {
+  name: string;
+  description: string;
+  percentage: number;
+  icon: string;
+}
+export const skills: Skill[] = [
+  {
+    name: "Figma",
+    description: "Leading design tool",
+    percentage: 90,
+    icon: "🎨",
+  },
+  {
+    name: "Framer",
+    description: "No-code website builder",
+    percentage: 70,
+    icon: "⚡",
+  },
+  {
+    name: "Adobe Photoshop",
+    description: "Raster graphics editor",
+    percentage: 60,
+    icon: "📸",
+  },
+];
+
+interface LinkItem {
+  name: string;
+  href: string;
+}
+
+interface FooterNavigationSection {
+  title: string;
+  links: LinkItem[];
+}
+
+export const footerNavigationData: FooterNavigationSection[] = [
+  {
+    title: "Pages",
+    links: [
+      { name: "Home", href: "#" },
+      { name: "About", href: "#" },
+      { name: "Contact", href: "#" },
+    ],
+  },
+  {
+    title: "CMS",
+    links: [
+      { name: "Work", href: "#" },
+      { name: "Work Single", href: "#" },
+      { name: "Blog", href: "#" },
+      { name: "Blog Single", href: "#" },
+    ],
+  },
+  {
+    title: "Utility",
+    links: [
+      { name: "404", href: "#" },
+      { name: "Licensing", href: "#" },
+    ],
+  },
+];

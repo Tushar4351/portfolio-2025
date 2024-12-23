@@ -73,9 +73,11 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
 }) => {
   return (
     <motion.div
-      initial={{ opacity: 0, x: -20 }}
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
       animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.1 * 6 }}
+      transition={{ delay: 0.1 * 2 }}
       className="flex items-center text-black font-normal justify-between px-4 py-4 rounded-xl bg-secondary transition-colors duration-200"
     >
       <div className="flex items-center space-x-2">

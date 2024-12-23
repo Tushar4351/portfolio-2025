@@ -12,16 +12,21 @@ const Services = () => {
       transition={{ delay: 0.1 * 3 }}
       className="flex flex-col space-y-4 rounded-xl h-[500px] md:h-[400px] lg:h-[320px] xl: bg-secondary"
     >
-      <div className="flex flex-col gap-12 md:gap-3 md:flex-row justify-between p-8 md:px-10 md:pt-10 md:pb-0">
-        <h2 className="text-2xl font-semibold h-auto md:w-1/2 text-gray-900">
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="p-8 md:px-10 md:pt-10 md:pb-0 flex flex-col gap-12 md: md:flex-row "
+      >
+        <h1 className="text-2xl md:w-1/2 font-semibold mb-4">
           So, What do I even do?
-        </h2>
-        <p className="text-primary h-auto md:w-1/2">
+        </h1>
+        <p className=" md:w-1/2">
           I create software solutions, specialize in web technologies, design
           responsive UIs, manage teams, and deliver impactful projects with
           technical expertise, leadership, and effective communication skills.
         </p>
-      </div>
+      </motion.div>
       <div className="flex-1 relative" ref={constraintsRef}>
         {services.map((service, index) => (
           <motion.div
