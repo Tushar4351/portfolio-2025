@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { GoArrowUpRight, GoArrowDown } from "react-icons/go";
 import { motion } from "framer-motion";
+
 export const HomeHeader = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -9,7 +10,10 @@ export const HomeHeader = () => {
       href="/about"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="max-w-lg mx-auto p-10 flex flex-col justify-between bg-secondary rounded-xl relative "
+      className="p-8 md:p-10 flex flex-col gap-12 md:gap-20 bg-secondary rounded-xl relative "
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.1 * 2 }}
       whileHover={{
         backgroundColor: "rgba(229, 231, 235, 0.7)",
         transition: { duration: 0.3 },
@@ -49,10 +53,9 @@ export const HomeHeader = () => {
 
       <div className="p-2">
         <p className="text-primary ">
-          I'm Tushar Bhowal, a software developer from India. I build
-          innovative, user-friendly applications that solve real-world problems,
-          blending creativity, functionality, and technology to deliver
-          impactful digital experiences.
+          I'm Tushar Bhowal, a software developer from India. I create
+          innovative, impactful solutions by blending creativity and
+          functionality in every project.
         </p>
       </div>
     </motion.a>
@@ -69,9 +72,14 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
   link,
 }) => {
   return (
-    <div className="flex items-center text-black font-normal justify-between px-4 py-4 rounded-xl bg-secondary transition-colors duration-200">
+    <motion.div
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.1 * 6 }}
+      className="flex items-center text-black font-normal justify-between px-4 py-4 rounded-xl bg-secondary transition-colors duration-200"
+    >
       <div className="flex items-center space-x-2">
-        <h2 className="flex items-center text-md ">
+        <h2 className="flex items-center text-lg font-medium ">
           {title}
           <motion.div
             animate={{
@@ -88,10 +96,14 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
         </h2>
       </div>
       {link && (
-        <a href="/projects" className="text-sm underline underline-offset-4">
+        <motion.a
+          whileHover={{ x: 5 }}
+          href="/projects"
+          className="text-sm underline underline-offset-4"
+        >
           {link}
-        </a>
+        </motion.a>
       )}
-    </div>
+    </motion.div>
   );
 };

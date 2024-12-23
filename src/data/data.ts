@@ -1,10 +1,13 @@
 import type { Variants } from "framer-motion";
-import { FaInstagram, FaLinkedin, FaGithub, FaFacebook } from "react-icons/fa";
+import { FaInstagram, FaGithub } from "react-icons/fa";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { TbBrandLinkedin } from "react-icons/tb";
-import React from "react";
+import { TbCodeCircle2 } from "react-icons/tb";
 import type { IconType } from "react-icons";
-
+import { PiUserSoundBold, PiHandFist } from "react-icons/pi";
+import { SiEngadget } from "react-icons/si";
+import { HiWindow } from "react-icons/hi2";
+import { HiOutlinePaintBrush } from "react-icons/hi2";
 //write the navigation data
 export interface NavigationItem {
   id: number;
@@ -121,5 +124,58 @@ export const socialLinks: SocialLink[] = [
     title: "Facebook",
     url: "https://www.facebook.com/tushar.bhowal.1",
     icon: RiFacebookCircleLine,
+  },
+];
+
+interface Service {
+  id: number;
+  title: string;
+  icon: IconType;
+  top: string;
+  left: string;
+}
+
+export const services: Service[] = [
+  {
+    id: 1,
+    title: "Frontend",
+    icon: HiWindow,
+    top: "5%",
+    left: "5%",
+  },
+  {
+    id: 2,
+    title: "Backend",
+    icon: TbCodeCircle2,
+    top: "30%",
+    left: "0%",
+  },
+  {
+    id: 3,
+    title: "Innovation",
+    icon: SiEngadget,
+    top: "5%",
+    left: "50%",
+  },
+  {
+    id: 4,
+    title: "Communication",
+    icon: PiUserSoundBold,
+    top: "30%",
+    left: "40%",
+  },
+  {
+    id: 5,
+    title: "Leadership",
+    icon: PiHandFist,
+    top: "55%",
+    left: "50%",
+  },
+  {
+    id: 6,
+    title: "Web Design",
+    icon: HiOutlinePaintBrush,
+    top: "60%",
+    left: "1%",
   },
 ];
