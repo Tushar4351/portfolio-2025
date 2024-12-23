@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import SliderControls from './SliderControls';
-import SliderIndicators from './SliderIndicators';
-import SliderItem from './SliderItem';
+import React, { useState, useEffect } from "react";
+import SliderControls from "../components/Slider Components/SliderControls";
+import SliderIndicators from "../components/Slider Components/SliderIndicators";
+import SliderItem from "../components/Slider Components/SliderItem";
 
 const images = [
-  'https://images.unsplash.com/photo-1517841905240-472988babdf9',
-  'https://images.unsplash.com/photo-1539571696357-5a69c17a67c6',
-  'https://images.unsplash.com/photo-1534528741775-53994a69daeb'
+  "https://images.unsplash.com/photo-1517841905240-472988babdf9",
+  "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6",
+  "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
 ];
 
 const Slider = () => {
@@ -26,11 +26,11 @@ const Slider = () => {
   }, [currentIndex, isAutoPlaying]);
 
   const nextSlide = () => {
-    setSlide(prev => [(prev[0] + 1) % slideCount, 1]);
+    setSlide((prev) => [(prev[0] + 1) % slideCount, 1]);
   };
 
   const previousSlide = () => {
-    setSlide(prev => [(prev[0] - 1 + slideCount) % slideCount, -1]);
+    setSlide((prev) => [(prev[0] - 1 + slideCount) % slideCount, -1]);
   };
 
   const goToSlide = (index: number) => {
@@ -39,7 +39,7 @@ const Slider = () => {
   };
 
   return (
-    <div 
+    <div
       className="relative w-full h-full overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
@@ -52,10 +52,7 @@ const Slider = () => {
           direction={direction}
         />
       ))}
-      <SliderControls
-        onPrevious={previousSlide}
-        onNext={nextSlide}
-      />
+      <SliderControls onPrevious={previousSlide} onNext={nextSlide} />
       <SliderIndicators
         total={slideCount}
         current={currentIndex}

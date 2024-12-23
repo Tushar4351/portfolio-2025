@@ -6,7 +6,7 @@ import {
   navigationData,
 } from "../data/data";
 import { FaFolder } from "react-icons/fa6";
-import { SlidingText } from "./SlidingTextLogoEffect";
+import { SlidingText } from "../components/SlidingTextLogoEffect";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);

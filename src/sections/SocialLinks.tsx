@@ -1,7 +1,7 @@
 import React from "react";
 import { socialLinks } from "../data/data";
 import { BiEnvelope } from "react-icons/bi";
-import { SlidingLogo } from "./SlidingTextLogoEffect";
+import { SlidingLogo } from "../components/SlidingTextLogoEffect";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
 const SocialLinks = () => {

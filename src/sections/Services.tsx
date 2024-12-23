@@ -14,7 +14,7 @@ const Services = () => {
     >
       <div className="flex flex-col gap-12 md:gap-3 md:flex-row justify-between p-8 md:px-10 md:pt-10 md:pb-0">
         <h2 className="text-2xl font-semibold h-auto md:w-1/2 text-gray-900">
-          So, what do I even do?
+          So, What do I even do?
         </h2>
         <p className="text-primary h-auto md:w-1/2">
           I create software solutions, specialize in web technologies, design
