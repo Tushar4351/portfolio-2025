@@ -1,11 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-interface SliderControlsProps {
-  onPrevious: () => void;
-  onNext: () => void;
-}
-
 const SliderControls: React.FC<SliderControlsProps> = ({
   onPrevious,
   onNext,

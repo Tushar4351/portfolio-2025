@@ -1,11 +1,6 @@
 import { motion } from "framer-motion";
 
-interface SkillBarProps {
-  name: string;
-  percentage: number;
-  icon: string;
-  description: string;
-}
+
 
 export const SkillBar = ({ name, percentage, icon, description }: SkillBarProps) => {
   return (

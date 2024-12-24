@@ -1,19 +1,13 @@
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
-interface CardProps {
-  title: string;
-  description: string;
-  icon: string;
-  image: string;
-  backGround: string;
-}
+
 const ProjectCard = ({
   title,
   description,
   icon,
   image,
   backGround,
-}: CardProps) => {
+}: ProjectCardProps) => {
   return (
     <motion.div
       whileHover="hover"

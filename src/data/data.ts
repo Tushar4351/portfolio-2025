@@ -3,17 +3,11 @@ import { FaInstagram, FaGithub } from "react-icons/fa";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { TbBrandLinkedin } from "react-icons/tb";
 import { TbCodeCircle2 } from "react-icons/tb";
-import type { IconType } from "react-icons";
 import { PiUserSoundBold, PiHandFist } from "react-icons/pi";
 import { SiEngadget } from "react-icons/si";
 import { HiWindow } from "react-icons/hi2";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
 //write the navigation data
-export interface NavigationItem {
-  id: number;
-  title: string;
-  url: string;
-}
 
 export const navigationData: NavigationItem[] = [
   {
@@ -93,12 +87,6 @@ export const hamburgerLineVariants: HamburgerLineVariants = {
 };
 
 //write the social links data with typescript
-export interface SocialLink {
-  id: number;
-  title: string;
-  url: string;
-  icon: IconType;
-}
 
 export const socialLinks: SocialLink[] = [
   {
@@ -126,14 +114,6 @@ export const socialLinks: SocialLink[] = [
     icon: RiFacebookCircleLine,
   },
 ];
-
-interface Service {
-  id: number;
-  title: string;
-  icon: IconType;
-  top: string;
-  left: string;
-}
 
 export const services: Service[] = [
   {
@@ -180,15 +160,6 @@ export const services: Service[] = [
   },
 ];
 
-interface CardProps {
-  id: number;
-  title: string;
-  description: string;
-  icon: string;
-  image: string;
-  backGround: string;
-  link: string;
-}
 export const cardData: CardProps[] = [
   {
     id: 1,
@@ -246,12 +217,7 @@ export const cardData: CardProps[] = [
     link: "https://docxtract.example.com",
   },
 ];
-export interface Skill {
-  name: string;
-  description: string;
-  percentage: number;
-  icon: string;
-}
+
 export const skills: Skill[] = [
   {
     name: "Figma",
@@ -272,16 +238,6 @@ export const skills: Skill[] = [
     icon: "📸",
   },
 ];
-
-interface LinkItem {
-  name: string;
-  href: string;
-}
-
-interface FooterNavigationSection {
-  title: string;
-  links: LinkItem[];
-}
 
 export const footerNavigationData: FooterNavigationSection[] = [
   {

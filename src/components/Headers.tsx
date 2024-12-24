@@ -63,10 +63,7 @@ export const HomeHeader = () => {
 };
 
 //section heading funtion
-interface SectionHeadingProps {
-  title: string;
-  link?: string;
-}
+
 export const SectionHeading: React.FC<SectionHeadingProps> = ({
   title,
   link,

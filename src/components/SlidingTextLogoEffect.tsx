@@ -1,14 +1,5 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
-import type { IconType } from "react-icons";
-
-interface SlidingTextProps {
-  firstText: string;
-  secondText: string;
-  className?: string;
-  duration?: number;
-  logo?: string;
-}
 
 export const SlidingText: React.FC<SlidingTextProps> = ({
   firstText,
@@ -51,13 +42,7 @@ export const SlidingText: React.FC<SlidingTextProps> = ({
   );
 };
 
-interface SlidingLogoProps {
-  FirstIcon: IconType;
-  SecondIcon: IconType;
-  className?: string;
-  duration?: number;
-  name?: string;
-}
+
 export const SlidingLogo: React.FC<SlidingLogoProps> = ({
   FirstIcon,
   SecondIcon,
