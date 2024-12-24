@@ -40,7 +40,7 @@ const Slider = () => {
 
   return (
     <div
-      className="relative w-full h-full overflow-hidden"
+      className="relative rounded-xl w-full h-full overflow-hidden"
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >

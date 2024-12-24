@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           FirstIcon={GoArrowUpRight}
           SecondIcon={GoArrowUpRight}
           name="Download Resume"
-          className="bg-secondary py-0.5 text-primary"
+          className="bg-secondary py-[1px] rounded-md text-primary"
         />
       </motion.div>
 
@@ -84,10 +84,10 @@ const Footer: React.FC = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="text-sm border-t border-gray-800 pt-8"
+        className="text-sm border-t border-gray-800 pt-8 text-white/60"
       >
         © Create By{" "}
-        <a href="#" className="text-white/60 hover:text-gray-300">
+        <a href="#" className="text-white">
           Tushar
         </a>
       </motion.div>

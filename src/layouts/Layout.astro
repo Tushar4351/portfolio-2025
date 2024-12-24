@@ -23,7 +23,7 @@ const { title } = Astro.props;
         margin: 0;
         padding: 0;
       }
-      .wrapper {
+      /* .wrapper {
         height: 100%;
         padding: 0.50rem;
         display: flex;
@@ -35,14 +35,12 @@ const { title } = Astro.props;
         display: flex;
         flex-direction: column;
         overflow: hidden;
-      }
+      }  */
     </style>
   </head>
   <body>
-    <div class="wrapper">
-      <div class="content">
-        <slot />
-      </div>
+    <div class="h-full p-3">
+      <slot />
     </div>
   </body>
 </html>

@@ -1,0 +1,13 @@
+---
+import Navbar from "../sections/NavBar";
+import Layout from "./Layout.astro";
+---
+
+<Layout title="Tushar">
+  <div
+    class="fixed top-0 left-0 right-0 z-50 px-3 pt-3 lg:relative lg:top-0 lg:left-0 lg:right-0 lg:z-50 lg:px-0 lg:pt-0"
+  >
+    <Navbar client:load />
+  </div>
+  <slot />
+</Layout>

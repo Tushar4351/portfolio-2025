@@ -1,6 +1,4 @@
 ---
-import Navbar from "../sections/NavBar";
-import Layout from "../layouts/Layout.astro";
 import Slider from "../sections/Slider";
 import { SocialLinksTop, SocialLinksBottom } from "../sections/SocialLinks";
 import { HomeHeader, SectionHeading } from "../components/Headers";
@@ -8,22 +6,22 @@ import Services from "../sections/Services";
 import Project from "../sections/Project";
 import Skills from "../sections/Skill";
 import Footer from "../sections/Footer";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<Layout title="Tushar">
-  <Navbar client:load />
-  <main class="flex-1 mt-3 overflow-y-auto">
-    <div class="flex flex-col lg:flex-row gap-3 h-full">
-      <!-- left part -->
-      <div
-        class="w-full lg:w-1/2 rounded-xl overflow-hidden h-[500px] lg:h-full lg:sticky md:top-0"
-      >
-        <Slider client:load />
+<MainLayout>
+  <main class="flex-1 mt-[75px] lg:mt-3">
+    <div
+      class="flex flex-col lg:flex-row gap-4 lg:h-[calc(100vh-5rem)] lg:overflow-hidden"
+    >
+      <!-- Left part -->
+      <div class="w-full lg:w-1/2 h-[500px] sm:h-[710px] lg:h-full">
+        <div class="h-full lg:sticky lg:top-0">
+          <Slider client:load />
+        </div>
       </div>
       <!-- right part -->
-      <div
-        class="w-full lg:w-1/2 lg:overflow-y-auto max-h-[calc(100vh-6rem)] scroll-smooth"
-      >
+      <div class="w-full lg:w-1/2 lg:overflow-y-auto">
         <div class="flex flex-col gap-3">
           <div class="md:grid md:grid-cols-5 gap-3">
             <div class="md:col-span-3"><HomeHeader client:load /></div>
@@ -43,4 +41,4 @@ import Footer from "../sections/Footer";
       </div>
     </div>
   </main>
-</Layout>
+</MainLayout>
