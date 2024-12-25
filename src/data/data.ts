@@ -1,4 +1,3 @@
-import type { Variants } from "framer-motion";
 import { FaInstagram, FaGithub } from "react-icons/fa";
 import { RiFacebookCircleLine } from "react-icons/ri";
 import { TbBrandLinkedin } from "react-icons/tb";
@@ -7,7 +6,6 @@ import { PiUserSoundBold, PiHandFist } from "react-icons/pi";
 import { SiEngadget } from "react-icons/si";
 import { HiWindow } from "react-icons/hi2";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
-//write the navigation data
 
 export const navigationData: NavigationItem[] = [
   {
@@ -18,12 +16,12 @@ export const navigationData: NavigationItem[] = [
   {
     id: 2,
     title: "Services",
-    url: "/services",
+    url: "#services",
   },
   {
     id: 3,
     title: "Skills",
-    url: "/skills",
+    url: "#skills",
   },
   {
     id: 4,
@@ -215,9 +213,9 @@ export const footerNavigationData: FooterNavigationSection[] = [
   {
     title: "Pages",
     links: [
-      { name: "Home", href: "#" },
-      { name: "About", href: "#" },
-      { name: "Contact", href: "#" },
+      { name: "Home", href: "/" },
+      { name: "About", href: "/about" },
+      { name: "Contact", href: "/contact" },
     ],
   },
   {

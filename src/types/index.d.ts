@@ -1,5 +1,5 @@
 //Navbar types
-
+import { Variants } from "framer-motion";
 interface NavigationItem {
   id: number;
   title: string;
@@ -26,9 +26,9 @@ interface SectionHeadingProps {
   title: string;
   link?: string;
 }
-interface MainHeadingProps{
-  title:string;
-  description:string;
+interface MainHeadingProps {
+  title: string;
+  description: string;
 }
 // Projects card types
 interface ProjectCardProps {
@@ -146,4 +146,11 @@ interface StepProps {
   title: string;
   description: string;
   index: number;
+}
+
+//Contact Form types
+interface FormData {
+  name: string;
+  email: string;
+  message: string;
 }

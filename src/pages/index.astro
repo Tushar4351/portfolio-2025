@@ -4,7 +4,7 @@ import { SocialLinksTop, SocialLinksBottom } from "../sections/SocialLinks";
 import { HomeHeader, SectionHeading } from "../components/Headers";
 import Services from "../sections/Services";
 import Project from "../sections/Project";
-import Skills from "../sections/Skill";
+import Skill from "../sections/Skill";
 import Footer from "../sections/Footer";
 import MainLayout from "../layouts/MainLayout.astro";
 ---
@@ -28,13 +28,16 @@ import MainLayout from "../layouts/MainLayout.astro";
             <div class="md:col-span-2"><SocialLinksTop client:load /></div>
           </div>
           <SectionHeading title="Services" client:load />
-          <div>
+          <divi id="services">
             <Services client:load />
-          </div>
+          </divi>
           <SectionHeading title="Projects" link="View All" client:load />
           <Project client:load />
           <SectionHeading title="Skills" client:load />
-          <Skills client:load />
+          <div id="skills">
+            <Skill client:load />
+          </div>
+
           <SocialLinksBottom client:load />
           <Footer client:load />
         </div>

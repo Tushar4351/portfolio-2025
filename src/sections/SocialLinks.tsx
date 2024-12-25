@@ -1,4 +1,3 @@
-import React from "react";
 import { socialLinks } from "../data/data";
 import { BiEnvelope } from "react-icons/bi";
 import { SlidingLogo } from "../components/SlidingTextLogoEffect";

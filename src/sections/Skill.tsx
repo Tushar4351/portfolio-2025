@@ -10,6 +10,7 @@ const Skill = () => {
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8 }}
       className="bg-secondary rounded-lg "
+      
     >
       <motion.div
         variants={{
@@ -20,7 +21,7 @@ const Skill = () => {
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="p-8 md:p-10 flex flex-col gap-12 md: md:flex-row "
+        className="p-10 flex flex-col gap-12 md: md:flex-row "
       >
         <h1 className="text-2xl md:w-1/2 font-semibold mb-4">
           My Skills, your advantage

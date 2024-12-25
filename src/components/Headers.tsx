@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 
 export const HomeHeader = () => {
   const [isHovered, setIsHovered] = useState(false);
+  // const pathname = window.location.pathname;
+  // console.log(pathname);
 
   return (
     <motion.a
@@ -113,7 +115,7 @@ export const MainHeading: React.FC<MainHeadingProps> = ({
 }) => {
   return (
     <motion.div
-      className="p-8 md:p-12 flex flex-col gap-12 md:gap-32 text-primary  bg-secondary rounded-xl relative "
+      className="p-10 md:p-12 flex flex-col gap-12 md:gap-32 text-primary  bg-secondary rounded-xl relative "
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.1 * 4 }}
