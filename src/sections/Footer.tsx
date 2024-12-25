@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           FirstIcon={GoArrowUpRight}
           SecondIcon={GoArrowUpRight}
           name="Download Resume"
-          className="bg-secondary py-[1px] rounded-md text-primary"
+          className="bg-secondary py-[1px] text-primary"
         />
       </motion.div>
 

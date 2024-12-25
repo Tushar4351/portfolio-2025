@@ -26,6 +26,10 @@ interface SectionHeadingProps {
   title: string;
   link?: string;
 }
+interface MainHeadingProps{
+  title:string;
+  description:string;
+}
 // Projects card types
 interface ProjectCardProps {
   title: string;
@@ -102,4 +106,44 @@ interface LinkItem {
 interface FooterNavigationSection {
   title: string;
   links: LinkItem[];
+}
+
+//menu types
+
+interface MenuVariants extends Variants {
+  closed: {
+    height: string;
+    transition: {
+      duration: number;
+      ease: string;
+    };
+  };
+  open: {
+    height: string;
+    transition: {
+      duration: number;
+      ease: string;
+    };
+  };
+}
+
+interface HamburgerLineVariants extends Variants {
+  closed: {
+    rotate: number;
+    y: number;
+  };
+  open: (i: number) => {
+    rotate: number;
+    y: number;
+    opacity: number;
+  };
+}
+
+//Process Steps types
+
+interface StepProps {
+  number: string;
+  title: string;
+  description: string;
+  index: number;
 }

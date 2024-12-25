@@ -54,7 +54,7 @@ export const SlidingLogo: React.FC<SlidingLogoProps> = ({
 
   return (
     <div
-      className={`gap flex items-center justify-between ${className} px-4 py-3  rounded-xl transition-colors duration-200 `}
+      className={` flex items-center justify-between ${className} px-4 py-3  rounded-xl transition-colors duration-200 `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

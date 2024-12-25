@@ -106,3 +106,24 @@ export const SectionHeading: React.FC<SectionHeadingProps> = ({
     </motion.div>
   );
 };
+
+export const MainHeading: React.FC<MainHeadingProps> = ({
+  title,
+  description,
+}) => {
+  return (
+    <motion.div
+      className="p-8 md:p-12 flex flex-col gap-12 md:gap-32 text-primary  bg-secondary rounded-xl relative "
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.1 * 4 }}
+      whileHover={{
+        backgroundColor: "rgba(229, 231, 235, 0.7)",
+        transition: { duration: 0.3 },
+      }}
+    >
+      <h1 className="text-3xl">{title}</h1>
+      <p className="">{description}</p>
+    </motion.div>
+  );
+};

@@ -4,13 +4,11 @@ import { BiEnvelope } from "react-icons/bi";
 import { SlidingLogo } from "../components/SlidingTextLogoEffect";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
-import { FaInstagram, FaGithub } from "react-icons/fa";
-import { RiFacebookCircleLine } from "react-icons/ri";
-import { TbBrandLinkedin } from "react-icons/tb";
+
 
 export const SocialLinksTop = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 relative ">
       <div className="hidden md:flex flex-col gap-2">
         {socialLinks.map((link) => (
           <motion.a
