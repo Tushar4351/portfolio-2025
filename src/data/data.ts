@@ -6,6 +6,7 @@ import { PiUserSoundBold, PiHandFist } from "react-icons/pi";
 import { SiEngadget } from "react-icons/si";
 import { HiWindow } from "react-icons/hi2";
 import { HiOutlinePaintBrush } from "react-icons/hi2";
+import type { Variants } from "framer-motion";
 
 export const navigationData: NavigationItem[] = [
   {
@@ -29,7 +30,36 @@ export const navigationData: NavigationItem[] = [
     url: "/blog",
   },
 ];
+//menu types
 
+interface MenuVariants extends Variants {
+  closed: {
+    height: string;
+    transition: {
+      duration: number;
+      ease: string;
+    };
+  };
+  open: {
+    height: string;
+    transition: {
+      duration: number;
+      ease: string;
+    };
+  };
+}
+
+interface HamburgerLineVariants extends Variants {
+  closed: {
+    rotate: number;
+    y: number;
+  };
+  open: (i: number) => {
+    rotate: number;
+    y: number;
+    opacity: number;
+  };
+}
 export const menuVariants: MenuVariants = {
   closed: {
     height: "auto",

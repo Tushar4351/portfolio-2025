@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import SliderControls from "../components/Slider Components/SliderControls";
 import SliderIndicators from "../components/Slider Components/SliderIndicators";
 import SliderItem from "../components/Slider Components/SliderItem";
-
+import { motion } from "framer-motion";
 const images = [
   "https://images.unsplash.com/photo-1517841905240-472988babdf9",
   "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6",
@@ -39,8 +39,14 @@ const Slider = () => {
   };
 
   return (
-    <div
+    <motion.div
       className="relative rounded-xl w-full h-full overflow-hidden"
+      initial={{ clipPath: "inset(0 0 100% 0)" }}
+      animate={{ clipPath: "inset(0 0 0% 0)" }}
+      transition={{
+        duration: 1.2,
+        ease: [0.76, 0, 0.24, 1],
+      }}
       onMouseEnter={() => setIsAutoPlaying(false)}
       onMouseLeave={() => setIsAutoPlaying(true)}
     >
@@ -58,7 +64,7 @@ const Slider = () => {
         current={currentIndex}
         onSelect={goToSlide}
       />
-    </div>
+    </motion.div>
   );
 };
 

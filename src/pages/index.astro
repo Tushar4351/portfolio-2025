@@ -24,7 +24,7 @@ import MainLayout from "../layouts/MainLayout.astro";
       <div class="w-full lg:w-1/2 lg:overflow-y-auto">
         <div class="flex flex-col gap-3">
           <div class="md:grid md:grid-cols-5 gap-3">
-            <div class="md:col-span-3"><HomeHeader client:load /></div>
+            <div class="md:col-span-3"><HomeHeader client:only /></div>
             <div class="md:col-span-2"><SocialLinksTop client:load /></div>
           </div>
           <SectionHeading title="Services" client:load />

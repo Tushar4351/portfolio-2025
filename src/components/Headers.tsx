@@ -4,24 +4,12 @@ import { motion } from "framer-motion";
 
 export const HomeHeader = () => {
   const [isHovered, setIsHovered] = useState(false);
-  // const pathname = window.location.pathname;
-  // console.log(pathname);
+  const pathname = window.location.pathname;
+  const isHome = pathname === "/";
 
-  return (
-    <motion.a
-      href="/about"
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-      className="p-8 md:p-10 flex flex-col gap-12 md:gap-20 bg-secondary rounded-xl relative "
-      initial={{ opacity: 0, x: -20 }}
-      animate={{ opacity: 1, x: 0 }}
-      transition={{ delay: 0.1 * 2 }}
-      whileHover={{
-        backgroundColor: "rgba(229, 231, 235, 0.7)",
-        transition: { duration: 0.3 },
-      }}
-    >
-      {isHovered && (
+  const sharedContent = (
+    <>
+      {isHovered && isHome && (
         <motion.div
           className="absolute top-4 right-4"
           initial={{ scale: 0, opacity: 0 }}
@@ -39,7 +27,7 @@ export const HomeHeader = () => {
         </motion.div>
       )}
 
-      <div className="flex items-center space-x-4 ">
+      <div className="flex items-center space-x-4">
         <div className="w-16 h-16 flex overflow-hidden rounded-full">
           <img
             src="/Tushar_favicon.png"
@@ -54,13 +42,46 @@ export const HomeHeader = () => {
       </div>
 
       <div className="p-2">
-        <p className="text-primary ">
+        <p className="text-primary">
           I'm Tushar Bhowal, a software developer from India. I create
           innovative, impactful solutions by blending creativity and
           functionality in every project.
         </p>
       </div>
+    </>
+  );
+
+  return isHome ? (
+    <motion.a
+      href="/about"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="p-8 md:p-10 flex flex-col gap-12 md:gap-20 bg-secondary rounded-xl relative"
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.1 * 2 }}
+      whileHover={{
+        backgroundColor: "rgba(229, 231, 235, 0.7)",
+        transition: { duration: 0.3 },
+      }}
+    >
+      {sharedContent}
     </motion.a>
+  ) : (
+    <motion.div
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      className="p-8 md:p-10 flex flex-col gap-12 md:gap-20 bg-secondary rounded-xl relative"
+      initial={{ opacity: 0, x: -20 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ delay: 0.1 * 2 }}
+      whileHover={{
+        backgroundColor: "rgba(229, 231, 235, 0.7)",
+        transition: { duration: 0.3 },
+      }}
+    >
+      {sharedContent}
+    </motion.div>
   );
 };
 

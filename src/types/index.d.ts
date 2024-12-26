@@ -1,5 +1,5 @@
 //Navbar types
-import { Variants } from "framer-motion";
+
 interface NavigationItem {
   id: number;
   title: string;
@@ -108,36 +108,7 @@ interface FooterNavigationSection {
   links: LinkItem[];
 }
 
-//menu types
 
-interface MenuVariants extends Variants {
-  closed: {
-    height: string;
-    transition: {
-      duration: number;
-      ease: string;
-    };
-  };
-  open: {
-    height: string;
-    transition: {
-      duration: number;
-      ease: string;
-    };
-  };
-}
-
-interface HamburgerLineVariants extends Variants {
-  closed: {
-    rotate: number;
-    y: number;
-  };
-  open: (i: number) => {
-    rotate: number;
-    y: number;
-    opacity: number;
-  };
-}
 
 //Process Steps types
 
@@ -149,8 +120,14 @@ interface StepProps {
 }
 
 //Contact Form types
-interface FormData {
+interface FormDatas {
   name: string;
   email: string;
   message: string;
+}
+
+//image container types
+interface ImageProps {
+  image: string;
+  alt: string;
 }

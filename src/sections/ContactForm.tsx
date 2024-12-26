@@ -3,9 +3,8 @@ import { useState } from "react";
 import emailjs from "@emailjs/browser";
 import { SERVICE_ID, TEMPLATE_ID, PUBLIC_KEY } from "astro:env/client";
 
-
 export default function ContactForm() {
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState<FormDatas>({
     name: "",
     email: "",
     message: "",

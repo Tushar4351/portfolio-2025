@@ -1,34 +1,12 @@
 ---
-import { Image } from "astro:assets";
 import MainLayout from "../layouts/MainLayout.astro";
-import Footer from "../sections/Footer";
-import MyInformation from "../sections/MyInformation";
-import ContactForm from "../sections/ContactForm";
+import ContactContainer from "../container/ContactContainer";
 ---
 
 <MainLayout>
-  <div
-    class="flex flex-col lg:flex-row gap-4 lg:h-[calc(100vh-7rem)] lg:overflow-hidden mt-3"
-  >
-    <!-- Left part -->
-    <div class="w-full lg:w-1/2 mt-16 lg:mt-0 h-[500px] sm:h-[710px] lg:h-full">
-      <div class="h-full lg:sticky lg:top-0">
-        <Image
-          class="object-cover rounded-xl w-full h-full"
-          src="https://images.unsplash.com/photo-1517841905240-472988babdf9"
-          alt="About me"
-          width="50"
-          height="50"
-        />
-      </div>
-    </div>
-    <!-- right part -->
-    <div class="w-full lg:w-1/2 lg:overflow-y-auto">
-      <div class="flex flex-col gap-3">
-        <ContactForm client:load />
-        <MyInformation client:load />
-        <Footer client:load />
-      </div>
-    </div>
-  </div>
+  <ContactContainer
+    image="https://images.unsplash.com/photo-1517841905240-472988babdf9"
+    alt="About me"
+    client:load
+  />
 </MainLayout>

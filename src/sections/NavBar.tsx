@@ -10,7 +10,6 @@ import { SlidingText } from "../components/SlidingTextLogoEffect";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  console.log(navigationData);
 
   return (
     <motion.nav
