@@ -3,14 +3,15 @@ import { skills } from "../data/data";
 import { motion } from "framer-motion";
 
 const Skill = () => {
+  console.log(skills);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8 }}
-      className="bg-secondary rounded-lg "
-      
+      className="bg-secondary rounded-xl "
     >
       <motion.div
         variants={{
@@ -38,8 +39,7 @@ const Skill = () => {
             key={skill.name}
             name={skill.name}
             percentage={skill.percentage}
-            icon={skill.icon}
-            description={skill.description}
+            src={skill.src}
           />
         ))}
       </div>

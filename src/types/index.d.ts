@@ -51,14 +51,13 @@ interface CardProps {
 interface SkillBarProps {
   name: string;
   percentage: number;
-  icon: string;
-  description: string;
+  src: string;
 }
+
 interface Skill {
   name: string;
-  description: string;
   percentage: number;
-  icon: string;
+  src: string;
 }
 
 // Text and Logo Animation Types
@@ -107,8 +106,6 @@ interface FooterNavigationSection {
   title: string;
   links: LinkItem[];
 }
-
-
 
 //Process Steps types
 
