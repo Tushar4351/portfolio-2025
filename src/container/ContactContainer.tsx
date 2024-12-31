@@ -5,7 +5,7 @@ import MyInformation from "../sections/MyInformation";
 import Footer from "../sections/Footer";
 const ContactContainer: React.FC<ImageProps> = ({ image, alt }) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-4 lg:h-[calc(100vh-7rem)] lg:overflow-hidden mt-3">
+    <div className="flex flex-col lg:flex-row gap-3 lg:h-[calc(100vh-6.2rem)] lg:overflow-hidden mt-2">
       {/* left side */}
       <motion.div
         initial={{ opacity: 0 }}

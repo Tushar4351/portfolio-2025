@@ -1,4 +1,4 @@
-import { SkillBar } from "../components/SkillsBar";
+import { SkillBar } from "../components/Skills/SkillsBar";
 import { skills } from "../data/data";
 import { motion } from "framer-motion";
 

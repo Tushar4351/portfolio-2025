@@ -4,15 +4,21 @@ import ProjectCard from "../components/ProjectCard";
 import { cardData, workTitleData } from "../data/data";
 import Footer from "../sections/Footer";
 import { motion, AnimatePresence } from "framer-motion";
+import { SlidingLogo } from "../components/SlidingTextLogoEffect";
+import { BiEnvelope } from "react-icons/bi";
+import { GoArrowUpRight } from "react-icons/go";
 
-const ProjectContainer = () => {
+interface ProjectCardProps {
+  project: Project;
+}
+
+const ProjectContainer = ({ project }: ProjectCardProps) => {
   const [currentImage, setCurrentImage] = useState(
     "https://images.unsplash.com/photo-1517841905240-472988babdf9"
   );
 
   return (
-    <div className="flex flex-col lg:flex-row gap-4 lg:h-[calc(100vh-7rem)] lg:overflow-hidden mt-3">
-      {/* left side */}
+    <div className="flex flex-col lg:flex-row gap-3 lg:h-[calc(100vh-6.2rem)] lg:overflow-hidden mt-2">
       <motion.div
         className="w-full lg:w-1/2 mt-16 lg:mt-0 h-[500px] sm:h-[710px] lg:h-full"
         initial={{ opacity: 0 }}
@@ -74,7 +80,7 @@ const ProjectContainer = () => {
                   top: `calc(0px + ${i * 40}px`,
                 }}
                 key={card.id}
-                href={card.link}
+                href={`/projects/${project.id}`}
                 onMouseEnter={() => setCurrentImage(card.image)}
                 onMouseLeave={() =>
                   setCurrentImage(
@@ -92,7 +98,14 @@ const ProjectContainer = () => {
               </a>
             ))}
           </motion.div>
-
+          <a href="/contact">
+            <SlidingLogo
+              FirstIcon={BiEnvelope}
+              SecondIcon={GoArrowUpRight}
+              name="Contact Me"
+              className="bg-black text-white"
+            />
+          </a>
           <Footer />
         </div>
       </div>

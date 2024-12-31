@@ -140,10 +140,6 @@ export const MainHeading: React.FC<MainHeadingProps> = ({
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.1 * 4 }}
-      whileHover={{
-        backgroundColor: "rgba(229, 231, 235, 0.7)",
-        transition: { duration: 0.3 },
-      }}
     >
       <h1 className="text-3xl">{title}</h1>
       <p className="">{description}</p>

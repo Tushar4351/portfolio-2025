@@ -5,10 +5,11 @@ import { motion } from "framer-motion";
 import { SocialLinksBottom, SocialLinksTop } from "../sections/SocialLinks";
 import StepProcess from "../sections/StepProcess";
 import Footer from "../sections/Footer";
+import SkillsMarquee from "../components/Skills/SkillsMarquee";
 
 const AboutContainer: React.FC<ImageProps> = ({ image, alt }) => {
   return (
-    <div className="flex flex-col lg:flex-row gap-4 lg:h-[calc(100vh-7rem)] lg:overflow-hidden mt-3">
+    <div className="flex flex-col lg:flex-row gap-3 lg:h-[calc(100vh-6.2rem)] lg:overflow-hidden mt-2">
       {/* left side */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -16,7 +17,7 @@ const AboutContainer: React.FC<ImageProps> = ({ image, alt }) => {
         transition={{ duration: 0.5 }}
         className="w-full lg:w-1/2 mt-16 lg:mt-0 h-[500px] sm:h-[710px] lg:h-full"
       >
-       <motion.div
+        <motion.div
           className="h-full lg:sticky lg:top-0 relative overflow-hidden"
           initial={{ clipPath: "inset(0 0 100% 0)" }}
           animate={{ clipPath: "inset(0 0 0% 0)" }}
@@ -47,6 +48,7 @@ const AboutContainer: React.FC<ImageProps> = ({ image, alt }) => {
             title={aboutTitleData.title}
             description={aboutTitleData.description}
           />
+          <SkillsMarquee />
           <StepProcess />
           <SocialLinksBottom />
           <Footer />

@@ -6,7 +6,13 @@ import { useState } from "react";
 const StepProcess = () => {
   const [isHovered, setIsHovered] = useState(false);
   return (
-    <div className="w-full flex flex-col rounded-xl bg-secondary py-8 md:py-12">
+    <motion.div
+      initial={{ opacity: 0, y: 100 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-100px" }}
+      transition={{ duration: 0.8 }}
+      className="w-full flex flex-col rounded-xl bg-secondary py-8 md:py-12"
+    >
       {/* Header Section */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -17,9 +23,14 @@ const StepProcess = () => {
         <div>
           <h2 className="text-md sm:text-2xl font-medium mb-2">Step process</h2>
           <p className="text-sm t">
-            A proven workflow <span className="text-white/60">that ensures </span>
+            A proven workflow{" "}
+            <span className="text-white/60">that ensures </span>
             <br />
-            <span className="text-white/60"> seamless collaboration and</span> <br />
+            <span className="text-white/60">
+              {" "}
+              seamless collaboration and
+            </span>{" "}
+            <br />
             outstanding results.
           </p>
         </div>
@@ -57,7 +68,7 @@ const StepProcess = () => {
           <GoArrowUpRight className="w-5 h-5 text-gray-600" />
         </motion.div>
       </motion.a>
-    </div>
+    </motion.div>
   );
 };
 

@@ -11,7 +11,7 @@ import type { Variants } from "framer-motion";
 export const navigationData: NavigationItem[] = [
   {
     id: 1,
-    title: "About Me",
+    title: "About",
     url: "/about",
   },
   {
@@ -227,7 +227,7 @@ export const skills: Skill[] = [
     src: "/bootstrap.png",
   },
   {
-    name: "Tailwind CSS",
+    name: "Tailwind",
     percentage: 90,
     src: "/tailwind.png",
   },
@@ -274,17 +274,14 @@ export const footerNavigationData: FooterNavigationSection[] = [
   },
   {
     title: "Utility",
-    links: [
-      { name: "404", href: "#" },
-      { name: "Licensing", href: "#" },
-    ],
+    links: [{ name: "404", href: "#" }],
   },
 ];
 
 export const aboutTitleData: MainHeadingProps = {
   title: "About Me",
   description:
-    "I am a self-motivated and ambitious B.Tech graduate aspiring to be a Software Engineer. Proficient in various programming languages with a strong project portfolio. Seeking a challenging role in a dynamic team to contribute to organizational success, while continuously learning and advancing skills. Dedicated to personal growth and making a positive impact in software engineering.",
+    "I am a self-motivated and ambitious B.Tech graduate with a passion for technology, aspiring to excel as a Software Engineer. Proficient in various programming languages and equipped with a strong project portfolio, I thrive on solving challenges and delivering innovative solutions. I seek to join a dynamic team where I can contribute to organizational success while continuously learning and refining my skills. Dedicated to growth, I aim to make a meaningful impact in the field of software engineering.",
 };
 
 export const workTitleData: MainHeadingProps = {
@@ -313,5 +310,38 @@ export const steps = [
     number: "04",
     title: "Launch",
     description: "I'll help you get your website live and ready for the world",
+  },
+];
+
+export const projects: Project[] = [
+  {
+    id: "modern-portfolio",
+    title: "Modern Portfolio",
+    description: "A minimalist portfolio website with smooth animations",
+    image: "/placeholder1.jpg",
+    category: "Web Design",
+    details: {
+      client: "Personal Project",
+      date: "March 2024",
+      role: "Full Stack Developer",
+      technologies: ["React", "TypeScript", "Tailwind CSS"],
+    },
+    fullDescription:
+      "A comprehensive portfolio website showcasing modern design principles and smooth animations. Built with performance and user experience in mind.",
+  },
+  {
+    id: "e-commerce-platform",
+    title: "E-Commerce Platform",
+    description: "Full-featured online shopping platform",
+    image: "/placeholder2.jpg",
+    category: "Web Development",
+    details: {
+      client: "RetailCo",
+      date: "February 2024",
+      role: "Frontend Developer",
+      technologies: ["Next.js", "Redux", "Stripe"],
+    },
+    fullDescription:
+      "A modern e-commerce platform with real-time inventory management, secure payments, and responsive design.",
   },
 ];

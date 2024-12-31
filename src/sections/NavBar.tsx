@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion, AnimatePresence, type Variants } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import {
   hamburgerLineVariants,
   menuVariants,
@@ -81,7 +81,7 @@ const Navbar = () => {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.1 * (i + 1) }}
-                      className="text-white text-lg font-medium hover:text-gray-300 transition-colors"
+                      className="text-white text-lg  font-medium hover:text-gray-300 transition-colors"
                     >
                       <SlidingText
                         firstText={item.title}

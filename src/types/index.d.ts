@@ -128,3 +128,19 @@ interface ImageProps {
   image: string;
   alt: string;
 }
+
+//projects 
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  image: string;
+  category: string;
+  details: {
+    client: string;
+    date: string;
+    role: string;
+    technologies: string[];
+  };
+  fullDescription: string;
+}
