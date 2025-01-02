@@ -3,7 +3,6 @@ import { skills } from "../data/data";
 import { motion } from "framer-motion";
 
 const Skill = () => {
-  console.log(skills);
 
   return (
     <motion.div
@@ -11,7 +10,7 @@ const Skill = () => {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-100px" }}
       transition={{ duration: 0.8 }}
-      className="bg-secondary rounded-xl "
+      className="bg-secondary rounded-xl"
     >
       <motion.div
         variants={{
