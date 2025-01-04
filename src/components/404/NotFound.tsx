@@ -24,15 +24,6 @@ export default function NotFound() {
               <div className="absolute right-[36%] top-[36%] w-[12%] h-[12%] bg-black" />
               <div className="absolute right-[0%] top-[48%] w-[48%] h-[12%] bg-black" />
               <div className="absolute right-[0%] top-[60%] w-[12%] h-[40%] bg-black" />
-              {/* Animated Character */}
-              <div
-                className="absolute w-[8%] h-[8%] bg-black transition-all duration-300 ease-in-out"
-                style={{
-                  right:
-                    position === 0 ? "36%" : position === 1 ? "38%" : "36%",
-                  top: position === 0 ? "36%" : position === 1 ? "34%" : "36%",
-                }}
-              />
             </div>
 
             {/* 0 */}
@@ -41,34 +32,33 @@ export default function NotFound() {
               <div className="absolute left-[0%] top-[12%] w-[12%] h-[76%] bg-black" />
               <div className="absolute right-[0%] top-[12%] w-[12%] h-[76%] bg-black" />
               <div className="absolute left-[0%] bottom-[0%] w-[100%] h-[12%] bg-black" />
-              {/* Animated Character */}
+
+              {/* Animated Character with Bouncing Motion */}
               <div
-                className="absolute w-[8%] h-[8%] bg-black transition-all duration-300 ease-in-out"
+                className="absolute w-[8%] h-[8%] bg-black transition-all duration-500 ease-in-out"
                 style={{
-                  left: position === 0 ? "12%" : position === 1 ? "14%" : "12%",
-                  bottom:
-                    position === 0 ? "12%" : position === 1 ? "14%" : "12%",
+                  left: "50%", // Center horizontally in the '0'
+                  transform: "translateX(-50%)", // Ensure perfect centering
+                  top:
+                    position === 0
+                      ? "12%"
+                      : position === 1
+                      ? "50%"
+                      : position === 2
+                      ? "88%"
+                      : "12%",
                 }}
               />
             </div>
 
             {/* Second 4 */}
             <div className="relative w-full h-full">
-              <div className="absolute right-[0%] top-[0%] w-[12%] h-[12%] bg-black" />
-              <div className="absolute right-[12%] top-[12%] w-[12%] h-[12%] bg-black" />
-              <div className="absolute right-[24%] top-[24%] w-[12%] h-[12%] bg-black" />
-              <div className="absolute right-[36%] top-[36%] w-[12%] h-[12%] bg-black" />
-              <div className="absolute right-[0%] top-[48%] w-[48%] h-[12%] bg-black" />
-              <div className="absolute right-[0%] top-[60%] w-[12%] h-[40%] bg-black" />
-              {/* Animated Character */}
-              <div
-                className="absolute w-[8%] h-[8%] bg-black transition-all duration-300 ease-in-out"
-                style={{
-                  right:
-                    position === 0 ? "-8%" : position === 1 ? "-6%" : "-8%",
-                  top: position === 0 ? "0%" : position === 1 ? "2%" : "0%",
-                }}
-              />
+              <div className="absolute left-[36%] top-[0%] w-[12%] h-[12%] bg-black" />
+              <div className="absolute left-[24%] top-[12%] w-[12%] h-[12%] bg-black" />
+              <div className="absolute left-[12%] top-[24%] w-[12%] h-[12%] bg-black" />
+              <div className="absolute left-[0%] top-[36%] w-[12%] h-[12%] bg-black" />
+              <div className="absolute left-[0%] top-[48%] w-[48%] h-[12%] bg-black" />
+              <div className="absolute left-[36%] top-[60%] w-[12%] h-[40%] bg-black" />
             </div>
           </div>
         </div>
