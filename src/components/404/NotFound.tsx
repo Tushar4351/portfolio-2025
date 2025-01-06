@@ -19,7 +19,7 @@ export default function NotFound() {
             {/* First 4 */}
             <div className="relative w-full h-full">
               <div className="absolute right-[0%] top-[0%] w-[12%] h-[12%] bg-black" />
-              <div className="absolute right-[12%] top-[12%] w-[12%] h-[12%] bg-black" />
+              <div className="absolute right-[12%] top-[12%] w-[12%] h-[12%] bg-black"/>
               <div className="absolute right-[24%] top-[24%] w-[12%] h-[12%] bg-black" />
               <div className="absolute right-[36%] top-[36%] w-[12%] h-[12%] bg-black" />
               <div className="absolute right-[0%] top-[48%] w-[48%] h-[12%] bg-black" />
