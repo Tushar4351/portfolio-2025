@@ -53,7 +53,11 @@ const ProjectContainer = ({ project }: ProjectCardProps) => {
       </motion.div>
 
       {/* right side */}
-      <div className="w-full lg:w-1/2 lg:overflow-y-auto">
+      <div
+        data-scroll
+        data-scroll-speed="1"
+        className="w-full lg:w-1/2 lg:overflow-y-auto"
+      >
         <div className="flex flex-col gap-3">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

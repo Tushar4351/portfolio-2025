@@ -34,7 +34,11 @@ const AboutContainer: React.FC<ImageProps> = ({ image, alt }) => {
         </motion.div>
       </motion.div>
       {/* right side */}
-      <div className="w-full lg:w-1/2 lg:overflow-y-auto">
+      <div
+        data-scroll
+        data-scroll-speed="1"
+        className="w-full lg:w-1/2 lg:overflow-y-auto"
+      >
         <div className="flex flex-col gap-3">
           <div className="md:grid md:grid-cols-5 gap-3">
             <div className="md:col-span-3">
