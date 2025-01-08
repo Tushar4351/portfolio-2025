@@ -3,7 +3,6 @@ import { skills } from "../data/data";
 import { motion } from "framer-motion";
 
 const Skill = () => {
-
   return (
     <motion.div
       initial={{ opacity: 0, y: 100 }}
@@ -21,7 +20,7 @@ const Skill = () => {
         whileInView="visible"
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.2 }}
-        className="p-10 flex flex-col gap-12 md: md:flex-row "
+        className="p-10 md:p-12 flex flex-col gap-12 md: md:flex-row "
       >
         <h1 className="text-2xl md:w-1/2 font-semibold mb-4">
           My Skills, your advantage

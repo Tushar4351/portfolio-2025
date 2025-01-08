@@ -9,13 +9,14 @@ import { BiEnvelope } from "react-icons/bi";
 import { GoArrowUpRight } from "react-icons/go";
 
 interface ProjectCardProps {
-  project: Project;
+  project: Project[];
 }
 
 const ProjectContainer = ({ project }: ProjectCardProps) => {
   const [currentImage, setCurrentImage] = useState(
     "https://images.unsplash.com/photo-1517841905240-472988babdf9"
   );
+  
 
   return (
     <div className="flex flex-col lg:flex-row gap-3 lg:h-[calc(100vh-6.2rem)] lg:overflow-hidden mt-2">
@@ -53,11 +54,7 @@ const ProjectContainer = ({ project }: ProjectCardProps) => {
       </motion.div>
 
       {/* right side */}
-      <div
-        data-scroll
-        data-scroll-speed="1"
-        className="w-full lg:w-1/2 lg:overflow-y-auto"
-      >
+      <div className="w-full lg:w-1/2 lg:overflow-y-auto">
         <div className="flex flex-col gap-3">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -84,7 +81,7 @@ const ProjectContainer = ({ project }: ProjectCardProps) => {
                   top: `calc(0px + ${i * 40}px`,
                 }}
                 key={card.id}
-                href={`/projects/${project.id}`}
+                href={`/projects/${project[i]?.id}`}
                 onMouseEnter={() => setCurrentImage(card.image)}
                 onMouseLeave={() =>
                   setCurrentImage(

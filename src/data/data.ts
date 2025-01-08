@@ -268,8 +268,6 @@ export const footerNavigationData: FooterNavigationSection[] = [
     links: [
       { name: "Work", href: "#" },
       { name: "Work Single", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Blog Single", href: "#" },
     ],
   },
   {

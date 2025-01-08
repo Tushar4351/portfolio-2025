@@ -16,7 +16,7 @@ const Services = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="px-10 pt-10 md:pb-0 flex flex-col gap-12 md: md:flex-row "
+        className="px-10 pt-10 md:pb-0 md:px-12 md:pt-12 flex flex-col gap-12 md: md:flex-row "
       >
         <h1 className="text-2xl md:w-1/2 font-semibold mb-4">
           So, What do I even do?

@@ -2,6 +2,8 @@ import { SlidingLogo } from "../components/SlidingTextLogoEffect";
 import { footerNavigationData } from "../data/data";
 import { GoArrowUpRight } from "react-icons/go";
 import { motion } from "framer-motion";
+import { MdCopyright } from "react-icons/md";
+
 const Footer: React.FC = () => {
   return (
     <motion.div
@@ -84,10 +86,11 @@ const Footer: React.FC = () => {
         whileInView={{ opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.6 }}
-        className="text-sm border-t border-gray-800 pt-8 text-white/60"
+        className="text-sm border-t border-gray-800 pt-8 text-white/60 flex items-center space-x-1"
       >
-        © Create By{" "}
-        <a href="#" className="text-white">
+        <MdCopyright className="w-4 h-4" />
+        <span>Create By</span>
+        <a href="/" className="text-white">
           Tushar
         </a>
       </motion.div>
