@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MainHeading } from "../components/Headers";
 import ProjectCard from "../components/ProjectCard";
 import { cardData, workTitleData } from "../data/data";
@@ -16,7 +16,19 @@ const ProjectContainer = ({ project }: ProjectCardProps) => {
   const [currentImage, setCurrentImage] = useState(
     "https://images.unsplash.com/photo-1517841905240-472988babdf9"
   );
-  
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 7000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!showContent) {
+    return null;
+  }
 
   return (
     <div className="flex flex-col lg:flex-row gap-3 lg:h-[calc(100vh-6.2rem)] lg:overflow-hidden mt-2">

@@ -1,9 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import ContactForm from "../sections/ContactForm";
 import MyInformation from "../sections/MyInformation";
 import Footer from "../sections/Footer";
+
 const ContactContainer: React.FC<ImageProps> = ({ image, alt }) => {
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 7000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!showContent) {
+    return null;
+  }
   return (
     <div className="flex flex-col lg:flex-row gap-3 lg:h-[calc(100vh-6.2rem)] lg:overflow-hidden mt-2">
       {/* left side */}

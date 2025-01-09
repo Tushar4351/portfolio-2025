@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   hamburgerLineVariants,
@@ -10,6 +10,19 @@ import { SlidingText } from "../components/SlidingTextLogoEffect";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [showContent, setShowContent] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 7000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (!showContent) {
+    return null;
+  }
 
   return (
     <motion.nav
