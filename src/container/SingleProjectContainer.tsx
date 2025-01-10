@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SingleProjectContainer = () => {
+const SingleProjectContainer = ({project}:Project) => {
   return (
     <div>SingleProjectContainer</div>
   )
