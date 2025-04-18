@@ -4,6 +4,9 @@ interface NavigationItem {
   id: number;
   title: string;
   url: string;
+  icon?: IconType;
+  gradient?: string;
+  iconColor?: string;
 }
 // Solical Links types
 interface SocialLink {

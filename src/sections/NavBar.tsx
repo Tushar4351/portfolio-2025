@@ -7,6 +7,7 @@ import {
 } from "../data/data";
 import { FaFolder } from "react-icons/fa6";
 import { SlidingText } from "../components/SlidingTextLogoEffect";
+import GlowNavigation from "../components/GlowNavigation";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,7 +35,7 @@ const Navbar = () => {
         variants={menuVariants}
         initial="closed"
         animate={isOpen ? "open" : "closed"}
-        className="mx-auto px-4 py-4 bg-primary rounded-xl w-full"
+        className="mx-auto px-4 py-4 lg:py-2 bg-primary rounded-xl w-full"
       >
         <div
           className={`flex flex-col lg:flex-row lg:justify-between lg:items-center  ${
@@ -87,21 +88,7 @@ const Navbar = () => {
               >
                 {/* Navigation Links */}
                 <div className="flex flex-col space-y-4">
-                  {navigationData.map((item, i) => (
-                    <motion.a
-                      key={item.id}
-                      href={item.url}
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={{ opacity: 1, x: 0 }}
-                      transition={{ delay: 0.1 * (i + 1) }}
-                      className="text-white text-lg  font-medium hover:text-gray-300 transition-colors"
-                    >
-                      <SlidingText
-                        firstText={item.title}
-                        secondText={item.title}
-                      />
-                    </motion.a>
-                  ))}
+                  <GlowNavigation />
                 </div>
 
                 {/* CTA Buttons */}
@@ -144,26 +131,15 @@ const Navbar = () => {
 
           {/* Desktop Navigation Links */}
           <div className="hidden lg:flex xl:pl-9 items-center space-x-8">
-            {navigationData.map((item, i) => (
-              <motion.a
-                key={item.id}
-                href={item.url}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * (i + 1) }}
-                className="text-white text-lg font-medium hover:text-gray-300 transition-colors"
-              >
-                <SlidingText firstText={item.title} secondText={item.title} />
-              </motion.a>
-            ))}
+            <GlowNavigation />
           </div>
 
           {/* Desktop CTA Buttons */}
-          <div className="hidden lg:flex text-lg font-semibold items-center gap-5">
+          <div className="hidden lg:flex text-lg font-medium items-center gap-4">
             <motion.a
               href="/contact"
               whileHover={{ scale: 1.05 }}
-              className="shadow-[0_0_0_3px_#000000_inset] px-4 py-[0.3rem] bg-transparent border-2 border-black dark:border-white dark:text-white text-black rounded-lg font-bold transform hover:-translate-y-1 transition duration-400 flex items-center justify-center gap-2"
+              className="shadow-[0_0_0_3px_#000000_inset] px-4 py-[0.3rem] bg-transparent border-2 border-black dark:border-white dark:text-white text-black rounded-lg transform hover:-translate-y-1 transition duration-400 flex items-center justify-center gap-2"
             >
               Contact Me
               <span>
