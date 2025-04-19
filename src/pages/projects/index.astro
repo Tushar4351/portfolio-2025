@@ -1,9 +1,9 @@
 ---
 import ProjectContainer from "../../container/ProjectContainer";
 import MainLayout from "../../layouts/MainLayout.astro";
-import {projects} from "../../data/data"
+import { projects } from "../../data/data";
 ---
 
 <MainLayout>
-  <ProjectContainer client:load project={projects}/>
+  <ProjectContainer client:load project={projects} />
 </MainLayout>

@@ -14,5 +14,5 @@ const { project } = Astro.props;
 ---
 
 <MainLayout>
-  <SingleProjectContainer project={project} client:load/>
+  <SingleProjectContainer client:load project={project} />
 </MainLayout>

@@ -74,7 +74,7 @@ export const GlowNavigation = () => {
 
   return (
     <motion.div
-      className="p-2 rounded-2xl bg-gradient-to-b from-black/80 to-black/40 backdrop-blur-lg border border-black/40 shadow-lg  relative overflow-hidden"
+      className="p-2 rounded-2xl h-[250px] lg:h-[60px] border border-black/40 shadow-lg  relative overflow-hidden"
       initial="initial"
       whileHover="hover"
     >
@@ -82,13 +82,13 @@ export const GlowNavigation = () => {
         className="absolute -inset-2 rounded-3xl z-0 pointer-events-none"
         variants={navGlowVariants}
       />
-      <ul className="flex flex-col lg:flex-row items-center gap-2 relative z-10">
+      <ul className="flex flex-col lg:flex-row items-center gap-5 relative z-10">
         {navigationData.map((item) => {
           const Icon = item.icon;
           const isActive = item.title === activeItem;
 
           return (
-            <motion.li key={item.id} className="relative">
+            <motion.li key={item.id} className="relative w-full">
               <a href={item.url} onClick={() => handleItemClick(item.title)}>
                 <motion.div
                   className="block rounded-xl overflow-visible group relative"

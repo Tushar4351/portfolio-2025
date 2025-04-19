@@ -56,7 +56,7 @@ export const HomeHeader = () => {
       href="/about"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="p-8 flex flex-col h-full gap-10 md:gap-0 justify-between bg-secondary rounded-xl relative"
+      className="p-8 md:p-10 flex flex-col h-full gap-10 md:gap-0 justify-between bg-secondary rounded-xl relative"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.1 * 2 }}
@@ -71,7 +71,7 @@ export const HomeHeader = () => {
     <motion.div
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className="p-8 md:p-10 flex flex-col gap-12 md:gap-20 bg-secondary rounded-xl relative"
+      className="p-8 md:p-10 flex flex-col h-full gap-10 md:gap-0 justify-between bg-secondary rounded-xl relative"
       initial={{ opacity: 0, x: -20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ delay: 0.1 * 2 }}
