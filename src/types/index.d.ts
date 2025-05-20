@@ -132,18 +132,23 @@ interface ImageProps {
   alt: string;
 }
 
-//projects 
+//projects
 interface Project {
   id: string;
   title: string;
-  description: string;
+  shortDescription: string;
   image: string;
+  mainImage?: string;
+  logo: string;
   category: string;
-  details: {
-    client: string;
-    date: string;
-    role: string;
-    technologies: string[];
+  links: {
+    liveUrl?: string;
+    githubUrl?: string;
   };
+  technologies: string[];
   fullDescription: string;
+  features: string[];
+  useCases: string[];
+  purpose: string;
+  date: string;
 }

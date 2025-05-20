@@ -48,18 +48,20 @@ const ProjectContainer = ({ project }: ProjectCardProps) => {
           }}
         >
           <AnimatePresence initial={false}>
-            <motion.img
+            <video
+              autoPlay
               key={currentImage}
               className="object-cover w-full h-full absolute inset-0"
               src={currentImage}
-              alt="Project preview"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{
-                duration: 0.15,
-                ease: "easeInOut",
-              }}
+              loop
+              muted
+              // initial={{ opacity: 0 }}
+              // animate={{ opacity: 1 }}
+              // exit={{ opacity: 0 }}
+              // transition={{
+              //   duration: 0.15,
+              //   ease: "easeInOut",
+              // }}
             />
           </AnimatePresence>
         </motion.div>

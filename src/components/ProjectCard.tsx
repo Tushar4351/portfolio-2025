@@ -14,17 +14,12 @@ const ProjectCard = ({
       initial="initial"
       className="relative w-full h-64 sm:h-96 rounded-3xl overflow-hidden cursor-pointer"
     >
-      <motion.img
+      <video
         src={image}
-        alt={title}
+        autoPlay
+        loop 
+        muted
         className="absolute inset-0 w-full h-full object-cover"
-        variants={{
-          initial: { scale: 1 },
-          hover: {
-            scale: 1.05,
-            transition: { duration: 0.3 },
-          },
-        }}
       />
       <div className="absolute inset-0 bg-black/20" />
 

@@ -4,8 +4,8 @@ import SliderIndicators from "../components/Slider Components/SliderIndicators";
 import SliderItem from "../components/Slider Components/SliderItem";
 import { motion } from "framer-motion";
 const images = [
-  "https://images.unsplash.com/photo-1517841905240-472988babdf9",
-  "https://images.unsplash.com/photo-1539571696357-5a69c17a67c6",
+  "/Tushar.jpg",
+    "/Tushar1.JPG",
   "https://images.unsplash.com/photo-1534528741775-53994a69daeb",
 ];
 
